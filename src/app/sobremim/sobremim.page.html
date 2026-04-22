@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar class="header-xeno">
+    <ion-title class="titulo-xeno">
+      Xenoblade Chronicles - Sobre Mim
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+
+      <!-- Botões topo -->
+      <ion-row class="ion-padding">
+        <ion-button color="secondary" (click)="irParaHome()">
+          ⭠ Ir para Home
+        </ion-button>
+        <ion-button expand="block" color="secondary" (click)="alternarTema()">
+          ☾ Alternar Modo Escuro
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card class="card-sobre">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+
+          <!-- IMAGEM -->
+          <ion-col size="12" size-md="4" class="ion-text-center">
+            <img src="assets/eu.png" alt="Carlos Wallace" class="img-perfil" />
+          </ion-col>
+
+          <!-- TEXTO -->
+          <ion-col size="12" size-md="8">
+            <h2 class="nome">Carlos Wallace Pereira</h2>
+            <p class="descricao">
+              Aluno de Análise e Desenvolvimento de Sistemas na Fatec Zona Sul, 
+              sob orientação do professor Alexandre Marchiori na disciplina 
+              de Desenvolvimento em Dispositivos Móveis.
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small" class="ion-text-center">
+      © 2026 Xenoblade App
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

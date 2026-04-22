@@ -1,0 +1,284 @@
+<ion-header>
+  <ion-toolbar class="header-xeno">
+    <ion-title class="titulo-xeno">
+      Xenoblade Chronicles - Personagens
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+
+      <!-- Botões topo -->
+      <ion-row class="ion-padding">
+        <ion-button color="secondary" (click)="irParaHome()">
+          ⭠ Ir para Home
+        </ion-button>
+        <ion-button expand="block" color="secondary" (click)="alternarTema()">
+          ☾ Alternar Modo Escuro
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('shulk')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'shulk'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/shulk.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Shulk</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 18 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Homs</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Shulk é o protagonista da história. Ele vive na Colônia 9, onde passa seu tempo pesquisando a Monado, uma poderosa e misteriosa lâmina capaz de danificar armaduras Mechon. 
+              Mais tarde, Shulk ganha controle sobre a Monado e desenvolve a habilidade de prever o futuro.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('reyn')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'reyn'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/reyn.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Reyn</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 18 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Homs</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Um dos melhores amigos de Shulk e Fiora. Reyn faz parte da Força de Defesa da Colônia 9. 
+              Apesar de ser meio impulsivo e cabeça quente, ele também é muito protetor com seus amigos e tem um grande coração. Em combate, Reyn atua como um “tanque”, atraindo os ataques dos inimigos para que o restante do grupo possa usar suas habilidades (Arts).
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('fiora')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'fiora'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/fiora.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Fiora</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 18 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Homs</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Amiga de infância de Shulk e Reyn, que também cresceu na Colônia 9, além de ser a irmã mais nova de Dunban.
+              É uma pessoa muito carinhosa, sempre se esforçando para cuidar de Shulk e garantir sua segurança.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('dunban')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'dunban'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/dunban.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Dunban</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 30 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Homs</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Dunban é corajoso, heroico, responsável e maduro.
+              Um ano antes do início do jogo, ele lutou em uma guerra contra os Mechon, empunhando a Monado para expulsá-los. Porém, isso teve um grande impacto em seu corpo, deixando seu braço direito paralisado.
+              Depois que Shulk herda a Monado, Dunban passa a lutar usando espadas comuns.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('sharla')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'sharla'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/sharla.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Sharla</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 21 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Homs</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Sobrevivente da invasão dos Mechon na Colônia 6.
+              Sharla é a irmã mais velha de Juju, por quem é extremamente protetora.
+              Ela é médica e, em batalha, consegue restaurar o HP dos aliados e curar efeitos negativos.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('riki')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'riki'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/riki.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Riki</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 40 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> Nopon</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Riki é um Nopon alegre vindo de Makna.
+              Ele tem um jeito único de falar e frequentemente serve como alívio cômico.
+              Apesar de ter sido escolhido como herói de sua tribo, isso aparentemente aconteceu apenas para quitar uma dívida com o chefe, já que ele e sua família comeram demais.
+              Em combate, ele se destaca aplicando efeitos negativos e status nos inimigos.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card class="flip-card" (click)="toggleCard('melia')">
+            <div class="flip-inner" [class.flipped]="cardVirado === 'melia'">
+
+              <!-- FRENTE -->
+              <div class="flip-front">
+                <img src="assets/melia.jpg" class="img-personagem" />
+              </div>
+
+              <!-- VERSO -->
+              <div class="flip-back">
+                <ion-list>
+                  <ion-item>
+                    <ion-label><strong>Nome:</strong> Melia</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Idade:</strong> 88 anos</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label><strong>Raça:</strong> High Entia</ion-label>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card-content>
+            <p>
+              Melia é a princesa dos High Entia. 
+              No início, ela é bastante orgulhosa, mas logo se aproxima do grupo e se torna uma grande aliada e amiga da equipe de Shulk. Ela segue o arquétipo clássico de maga: possui alto poder de ataque e defesa com ether, mas baixo HP e defesa física.
+              Usa diversas habilidades de ether para causar dano aos inimigos.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small" class="ion-text-center">
+      © 2026 Xenoblade App
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

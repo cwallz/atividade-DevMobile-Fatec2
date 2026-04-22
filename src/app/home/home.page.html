@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar class="header-xeno">
+    <ion-title class="titulo-xeno">
+      Xenoblade Chronicles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+
+    <!-- Botões topo -->
+    <ion-row class="ion-padding">
+      <ion-button expand="block" color="secondary" (click)="alternarTema()">
+        ☾ Alternar Modo Escuro
+      </ion-button>
+    </ion-row>
+
+    <ion-row>
+
+      <!-- HISTÓRIA -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="flip-card" (click)="toggleCard('historia')">
+          <div class="flip-inner" [class.flipped]="cardVirado === 'historia'">
+
+            <!-- Frente -->
+            <div class="flip-front">
+
+              <div class="card-bg">
+                <img src="assets/historia.jpg" alt="História Xenoblade" />
+
+                <div class="overlay">
+                  <h2>📖 História</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verso -->
+            <div class="flip-back">
+              <ion-card-content class="ion-text-center">
+                Nessa seção, você verá um pouco sobre a história de Xenoblade ⚔️
+                <ion-button expand="block" color="secondary" (click)="irParaHistoria(); $event.stopPropagation()">
+                  Acessar
+                </ion-button>
+              </ion-card-content>
+            </div>
+
+          </div>
+        </ion-card>
+      </ion-col>
+
+      <!-- PERSONAGENS -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="flip-card" (click)="toggleCard('personagens')">
+          <div class="flip-inner" [class.flipped]="cardVirado === 'personagens'">
+
+          <!-- Frente -->
+            <div class="flip-front">
+
+              <div class="card-bg">
+                <img src="assets/personagens.jpg" alt="personagens" />
+
+                <div class="overlay">
+                  <h2>Personagens</h2>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verso -->
+            <div class="flip-back">
+              <ion-card-content class="ion-text-center">
+                Aqui você verá os personagens da franquia.
+                <ion-button expand="block" color="secondary" (click)="irParaPersonagens(); $event.stopPropagation()">
+                  Acessar
+                </ion-button>
+              </ion-card-content>
+            </div>
+
+          </div>
+        </ion-card>
+      </ion-col>
+
+      <!-- SOBRE -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="flip-card" (click)="toggleCard('sobre')">
+          <div class="flip-inner" [class.flipped]="cardVirado === 'sobre'">
+
+          <!-- Frente -->
+            <div class="flip-front">
+
+              <div class="card-bg">
+                <img src="assets/sobremim.jpg" alt="sobre mim" />
+
+                <div class="overlay">
+                  <h2>Sobre Mim</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-back">
+              <ion-card-content class="ion-text-center">
+                Saiba mais sobre o desenvolvedor.
+                <ion-button expand="block" color="secondary" (click)="irParaSobreMim(); $event.stopPropagation()">
+                  Acessar
+                </ion-button>
+              </ion-card-content>
+            </div>
+
+          </div>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small" class="ion-text-center">
+      © 2026 Xenoblade App
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

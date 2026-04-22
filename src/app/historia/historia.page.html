@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="header-xeno">
+    <ion-title class="titulo-xeno">
+      Xenoblade Chronicles - História
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+
+      <!-- Botões topo -->
+      <ion-row class="ion-padding">
+        <ion-button color="secondary" (click)="irParaHome()">
+          ⭠ Ir para Home
+        </ion-button>
+        <ion-button expand="block" color="secondary" (click)="alternarTema()">
+          ☾ Alternar Modo Escuro
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+
+          <ion-card>
+
+            <ion-card-header>
+              <ion-card-title class="ion-text-center  ion-text-white">
+                📖 A História
+              </ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+
+              <p class="descricao">
+                No vídeo abaixo você saberá um pouco mais sobre a história do jogo.
+              </p>
+
+              <!-- VÍDEO -->
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/DpqszL-507k"
+                  title="Xenoblade Chronicles História"
+                  frameborder="0"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <p class="descricao link">
+                Ou <a href="https://www.youtube.com/watch?v=DpqszL-507k" target="_blank">
+                  clique aqui para assistir no YouTube
+                </a>
+              </p>
+
+            </ion-card-content>
+
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small" class="ion-text-center">
+      © 2026 Xenoblade App
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
